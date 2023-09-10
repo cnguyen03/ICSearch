@@ -1,0 +1,93 @@
+
+-------------------------------------------------------------------------------
+
+required:
+
+(done) load inverted index into JSON file
+(done) transition from boolAND comparison of documents to cosine similarity of documents
+- remove fragments?
+- same similarity score --> return the next one?
+README.txt
+TEST.txt
+
+
+perhaps:
+split indexer file into 26 files, only need to load parts of the index based on the terms in the search query
+
+
+need testing:
+tf-idf
+whether query is under 300 ms
+
+-------------------------------------------------------------------------------
+
+extra credit:
+
+Extra percentual credit will be given for tasks that improve the retrieval and the user search
+Except for the GUI, you must code from scratch.
+
+- Detect and eliminate duplicate pages. (1 pt for exact, 2 pts for near)   
+||DONE(fingerprint and simHash) ||
+
+- Add HITS and Page Rank to ranking. (1.5 pts HITS, 2.5 for PR)
+have not started
+
+
+- Implement 2-gram and 3-gram indexing and use it in retrieval. (1 pt)
+    - preprocessing, store index for both 2-consecutive and 3-consecutive terms? can be processed along with single term tokens
+    - at time of retrieval, load only 2- or 3-consecutive terms when possible, or also single term tokens?
+|| done! ||
+
+
+- Enhance the index with word positions and use them for retrieval. (2 pts)
+have not started
+|| done with creating positional index w/ single word, not sure how to use it in search though...||
+
+
+- Index anchor words for the target pages. (1 pt).
+have not started | what are anchor words :/
+
+
+- Implement a Web or local GUI interface instead of using the console. (1 pt for the local GUI, 2 pts for a web GUI)
+ ||in progress - john||
+ 
+
+- Implement the summarization of the resulting pages using the OpenAI API and show the short summaries in the web GUI. (2 pts)
+ ||Done! - john||
+
+
+-------------------------------------------------------------------------------
+
+Some evaluation criteria to guide you:
+
+Does your search engine work as expected of search engines?
+
+How general are the heuristics that you employed to improve the retrieval?
+
+Is the search response time under the expected limit?
+
+Do you demonstrate in-depth knowledge of how your search engine works?
+Are you able to answer detailed questions pertaining to any aspect of its implementation and justify your choices?
+
+-------------------------------------------------------------------------------
+
+Deliverables
+
+Submit on Canvas a zip file containing all the programs you wrote for this
+project, as well as a pure text README.txt file describing how to use
+your software (i.e. at lesat: how to run the code that creates the index,
+how to start the search interface and how to perform a simple query) and
+a TEST.txt pure-text document with the test queries that you used to
+evaluate your engine (no need to report the results) and with comments
+on which ones started by doing poorly and explanations of what you did
+to make them perform better. (important note: you do not need to add
+the index file in the zip, since we should be able to recreate it if needed.)
+
+A live demonstration of your search engine for the TAs. You are expected
+to share your screen and guide the TAs through the code that you wrote,
+and also to turn on your video. All members of the group need to be able
+to answer questions related to the project and search engines in general
+during this demo. If one or more members do not show up in the interview,
+they will get zero. In Spring 2022, the interviews will be in-person.
+
+-------------------------------------------------------------------------------
